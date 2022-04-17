@@ -1,0 +1,53 @@
+.search-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+input {
+  font-size: 1rem;
+}
+
+.disease-cards {
+  display: block;
+  margin-top: 1rem;
+}
+
+.card {
+  border: 1px solid black;
+  background-color: white;
+  padding: 0.5rem;
+  margin: 5px 5px;
+}
+
+.card > .header {
+  margin-bottom: 0.25rem;
+}
+
+.card a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: large;
+}
+
+.hide {
+  display: none;
+}
+
+.textDiseases {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  transition: 0.7s all;
+}
+
+.textDiseases:hover {
+  border-bottom: 1px solid blue;
+  color: blue;
+  transition: 0.7s all;
+}
+
+#display{
+  margin: 10px;
+}

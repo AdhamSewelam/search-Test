@@ -1,29 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Poppins:wght@500;600;800&family=Roboto+Slab:wght@300;400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css" />
+    <link rel="stylesheet" href="node_modules/animate.css/animate.css" />
+    <link rel="stylesheet" href="node_modules/animate.css/animate.compat.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+        df-messenger {
+            margin: 0;
+            padding: 0;
+            position: fixed;
+            right: 0;
+            transform: translateX(50%) translateY(50%);
+            bottom: 3px;
+        }
+    </style>
     <title>Search Test</title>
-  </head>
-  <body>
-    <div class="search-wrapper">
-      <label for="search">Search Disease</label>
-      <input type="search" id="search" data-search />
+</head>
+
+<body class="bgSearch">
+    <div id="loading" class="position-fixed top-0 bottom-0 start-0 end-0">
+        <i class="fa-solid fa-spinner text-white fa-spin fa-5x"></i>
     </div>
-    <div class="disease-cards" data-disease-cards-container></div>
-    <template data-disease-template>
-      <div class="card">
-        <a
-          class="header"
-          id="diseaseLink"
-          href="pageDisplay.html"
-          data-header
-        ></a>
+
+    
+<section id="searchHome">
+    <div
+    class="backgrXray position-relative text-white d-flex justify-content-center align-items-center"
+  >
+    <div class="text-center headIndexXray">
+      <h2 class="h1 fs-1 fontNavXray">Search</h2>
+      <span class="border-bottom border-3 d-block borderXray m-auto"></span>
+      <a class="glitch" data-glitch="About Respiratory diseases">
+        About Respiratory  diseases</a
+      >
+    </div>
+    <div class="opacityXray position-absolute w-100 h-100"></div>
+
+    </div>
+    <a href="#searchBar" class="animated bounce downbottonHome"></a>
+  </section>
+
+    <div id="searchBar" class="container bg-light">
+        <!-- <div>
+        
+        <div class="position-relative ">
+          
+          <img src="picture/er.png" class="w-100 picSearch  " alt=""/>
+          <h2 class="headShearch">fwerfwefwe</h2>
+        <div class="backHeadImge  w-100 h-100 position-absolute top-0   "></div>
+        
+        </div>
+      
+      </div> -->
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <img src="../css/images/WhatsApp Image 2022-05-30 at 1.32.29 PM.png" alt="" href="index.html" class="img-fluid navbar-brand imgLogo" />
+                <a class="ps-3 navbar-brand fw-bold text-white" href="index.html">
+            Medi-Discover</a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fw-bold">
+              <li class="nav-item">
+                <a
+                  class="nav-link active navLinkHover text-white"
+                  aria-current="page"
+                  href="../index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link navLinkHover text-white" href="../about.html"
+                  >About</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link navLinkHover text-white active"
+                  href="index.html"
+                  >Disease</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link fw-bold navLinkHover text-white"
+                  href="../checker.html"
+                  >X-Ray</a
+                >
+              </li>
+
+              <!-- <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success rounded-pill" type="submit">Search</button>
+                  </form> -->
+
+              <li class="nav-item mx-3 mt-2">
+                <div class="nav-link">
+                  <div id="switch">
+                    <div id="circle" class="">
+                      <i id="sunb" class="fa-solid fa-sun fa-xl"></i>
+                      <i
+                        id="moonB"
+                        class="fa-solid fa-moon d-none fa-xl text-white"
+                      ></i>
+                    </div>
+
+                    <!-- <div id="circle"></div> -->
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+
+
+      <!-- <div
+        class="backgrSearch position-relative text-white d-flex justify-content-center align-items-center mt-5"
+      >
+        <div class="opacitySearch position-absolute w-100 h-100"></div>
+        <h2 class="headIndex">Search About COVID19 disease</h2>
+      </div> -->
+      
+
+      <div class="search-wrapper pt-5">
+        <!-- <label for="search">Search Disease</label> -->
+        <input
+          type="search"
+          id="search"
+          placeholder="Search Disease"
+          class="rounded-pill border-1 form-control"
+          data-search
+        />
       </div>
-    </template>
+      <div class="disease-cards pb-5" data-disease-cards-container></div>
+      <template data-disease-template>
+        <div class="card bg-light">
+          <a
+            class="header"
+            id="diseaseLink"
+            href="pageDisplay.html"
+            data-header
+          ></a>
+            </div>
+            </template>
+            
+    </div>
+
+    
+
+    <button onclick="topFunction()" class="border-0 rounded-circle  position-fixed " id="myBtn" title="Go to top"><i class="fa-solid fa-angles-up text-white fa-xl"></i> </button>
+
     <div id="display"></div>
-    <script src="script.js" defer></script>
+
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/jquery/dist/jquery-migrate-1.2.1.min.js"></script>
+    <script src="../node_modules/slick-carousel/slick/slick.min.js"></script>
+    <script src="../node_modules/wow.js/dist/wow.min.js"></script>
+    <script src="../node_modules/typed.js/lib/typed.min.js"></script>
+    <script src="js/jquery-3.6.0.js"></script>
+    <script src="bootstrap.js"></script>
+    <df-messenger df-cx="true" chat-title="Healthcare" agent-id="888bbc33-4e22-4c4b-8f96-738d3dc90669" language-code="en">
+    </df-messenger>
+    <script src="js/script.js" defer></script>
+    <script src="../js/app.js" defer></script>
   </body>
 </html>

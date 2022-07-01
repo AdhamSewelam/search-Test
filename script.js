@@ -35,5 +35,3 @@ fetch("https://medicalproject1010.herokuapp.com/conditions")
             })
         }
     })
-
-

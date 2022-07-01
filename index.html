@@ -23,43 +23,16 @@
 </head>
 
 <body class="bgSearch">
-    <div id="loading" class="position-fixed top-0 bottom-0 start-0 end-0">
-        <i class="fa-solid fa-spinner text-white fa-spin fa-5x"></i>
-    </div>
 
     <div id="searchBar" class="container bg-light">
-        <!-- <div>
-        
-        <div class="position-relative ">
-          
-          <img src="picture/er.png" class="w-100 picSearch  " alt=""/>
-          <h2 class="headShearch">fwerfwefwe</h2>
-        <div class="backHeadImge  w-100 h-100 position-absolute top-0   "></div>
-        
+
+
+        <div class="search-wrapper pt-5">
+            <!-- <label for="search">Search Disease</label> -->
+            <input type="search" id="search" placeholder="Search Disease" class="rounded-pill border-1 form-control" data-search />
         </div>
-      
-      </div> -->
-
-      <!-- <div
-        class="backgrSearch position-relative text-white d-flex justify-content-center align-items-center mt-5"
-      >
-        <div class="opacitySearch position-absolute w-100 h-100"></div>
-        <h2 class="headIndex">Search About COVID19 disease</h2>
-      </div> -->
-      
-
-      <div class="search-wrapper pt-5">
-        <!-- <label for="search">Search Disease</label> -->
-        <input
-          type="search"
-          id="search"
-          placeholder="Search Disease"
-          class="rounded-pill border-1 form-control"
-          data-search
-        />
-      </div>
-      <div class="disease-cards pb-5" data-disease-cards-container></div>
-      <template data-disease-template>
+        <div class="disease-cards pb-5" data-disease-cards-container></div>
+        <template data-disease-template>
         <div class="card bg-light">
           <a
             class="header"
@@ -69,13 +42,13 @@
           ></a>
             </div>
             </template>
-            
+
     </div>
 
-    <button onclick="topFunction()" class="border-0 rounded-circle  position-fixed " id="myBtn" title="Go to top"><i class="fa-solid fa-angles-up text-white fa-xl"></i> </button>
-
     <div id="display"></div>
+
     <script src="script.js" defer></script>
     <script src="app.js" defer></script>
-  </body>
+</body>
+
 </html>

@@ -27,7 +27,7 @@ fetch("https://medicalproject1010.herokuapp.com/conditions")
         })
         var link = document.querySelectorAll("#diseaseLink")
         for (let i = 0; i < link.length; i++) {
-            link[i].addEventListener("click", function (e) {
+            link[i].addEventListener("click", function(e) {
                 var currentDisease = e.target.text
                 var currentDis = localStorage.setItem("disease", currentDisease);
                 console.log(localStorage.getItem("disease"))
